@@ -1,0 +1,45 @@
+// footer {
+//     background: #2c256b;
+//     // padding: 13px 0;
+//     border-top: 4px solid #bb2b31;
+//     position: relative;
+//     height: 44px;
+//     overflow: hidden;
+//     @media screen and (max-width: 1024px) {
+//         // display: none;
+//     }
+//     .container {
+//         display: flex;
+//         max-width: 1254px;
+//         justify-content: space-between;
+//         align-items: center;
+//         height: 100%;
+//     }
+//     .copyright {
+//         color: #a09dbc;
+//         font-size: 12px;
+//         &:first-child {
+//             @media screen and (max-width: 768px) {
+//                 line-height: 1em;
+//                 font-size: 11px;
+//                 text-align: center;
+//             }
+//             @media screen and (max-width: 360px) {
+//                 display: none;
+//             }
+//         }
+//         &:last-child {
+//             min-width: 66px;
+//             margin-left: 20px;
+//             @media screen and (max-width: 768px) {
+//                 display: none;
+//             }
+//             @media screen and (max-width: 360px) {
+//                 display: block;
+//                 text-align: center;
+//                 min-width: 100%;
+//                 margin-left: 0px;
+//             }
+//         }
+//     }
+// }
