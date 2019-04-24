@@ -19,7 +19,7 @@ body {
     .lamp {
 
       // animation: lampAnimation 6s cubic-bezier(0.25, 0.1, 0.25, 1) alternate infinite;
-      animation: lampAnimation 6s cubic-bezier(0.25, 0.1, 0.25, 1)  infinite;
+      animation: lampAnimation 6s cubic-bezier(0.42,0,0.58,1)  infinite;
 
       // animation: lampAnimation 3s ease-in-out infinite;
       &:after {
@@ -29,6 +29,17 @@ body {
     .light-btn__arrows, .light-btn__title {
       display: none;
     }
+
+    .mushes {
+      &__one {
+        animation: mosh1 6s linear infinite;
+      }
+  
+       &__two{
+        animation: mosh2 6s linear infinite;
+      }
+    }
+
   }
 }
 
@@ -140,12 +151,12 @@ main {
     bottom: 0;
     margin: auto;
     width: 520px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    height: 390px;
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap;
     text-align: center;
-    align-items: flex-start;
+    // align-items: flex-start;
     &__yaer {
       font-size: 148px;
       line-height: 144px;
@@ -162,11 +173,14 @@ main {
       color: #fff;
       width: 100%;
       letter-spacing: 29px;
+      margin-top: 6px;
+      margin-left: 8px;
     }
     &__time {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      margin-top: 36px;
       &--separator {
         font-size: 68px;
         color: #fff;
@@ -262,16 +276,59 @@ main {
 }
 
 .mushes {
-  img {
-    &:nth-child(1){
+  &__one {
       position: absolute;
-      left: 40%;
-      top: 20%;
+      left: 46%;
+      top: 34%;
+  }
+
+   &__two{
+      position: absolute;
+      left: 54%;
+      top: 34%;
+  }
+}
+
+.tags {
+  &__item {
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Anton';
+    &:after {
+      content: '';
+      right: -15px;
+      bottom:-6px;
+      width: 7px;
+      height: 7px;
+      position: absolute;
+      border-radius: 100%;
+      border: 2px solid #fff;
+    }
+    &:nth-child(1) {
+      left: 10%;
+      top: 40%;
+      font-size: 20px;
     }
     &:nth-child(2) {
-      position: absolute;
-      left: 60%;
-      top: 20%;
+      left: 22%;
+      top: 15%;
+      font-size: 36px;
+    }
+    &:nth-child(3) {
+      left: 56%;
+      top: 13%;
+      font-size: 20px;
+    }
+    &:nth-child(4) {
+      left: 24%;
+      top: 74%;
+      font-size: 20px;
+    }
+    &:nth-child(5) {
+      left: 70%;
+      top: 40%;
+      font-size: 36px;
     }
   }
 }
@@ -361,17 +418,43 @@ main {
 
 @keyframes mosh1 {
   0% {
-
+      transform: translate(0, 0);
   }
   
-  33% {
-
+  20% {
+    transform: translate(-30px, -10px);
   }
-  34% {
- 
+  40% {
+    transform: translate(-20px, -40px);
+  }
+  55% {
+    transform: translate(40px, -30px);
+  }
+  80% {
+    transform: translate(50px, -5px);
   }
   100% {
- 
+    transform: translate(0, 0);
   }
 }
 
+@keyframes mosh2 {
+  0% {
+      transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-45px, -10px);
+  }
+  35% {
+    transform: translate(-45px, -40px);
+  }
+  55% {
+    transform: translate(40px, -30px);
+  }
+  80% {
+    transform: translate(35px, -60px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
