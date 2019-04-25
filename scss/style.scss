@@ -135,13 +135,14 @@ body {
       right: 50px;
     }
     @media screen and (max-width: 1440px) {
-      max-width: 380px;
-      right: 40px;
+      max-width: 360px;
+      right: 35px;
     }
     @media screen and (max-width: 1280px) {
       // left: 0;
       // right: 0;
       // margin: auto;
+      max-width: 430px;
       position: relative;
       right: auto;
       bottom: auto;
@@ -235,8 +236,8 @@ body {
         padding: 13px 0 11px 0;
       }
       @media screen and (max-width: 768px) {
-        padding: 10px 0 8px 0;
-        font-size: 12px;
+        // padding: 10px 0 8px 0;
+        font-size: 14px;
       }
       &:active {
         transform: translateY(1px);
@@ -245,7 +246,7 @@ body {
       // }
     }
   }
-  break {
+  .break {
     @media screen and (max-width: 1280px) {
       width: 100%;
     }
