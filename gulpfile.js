@@ -2,7 +2,7 @@
 var paths = {
     styles: {
         // By using styles/**/*.sass we're telling gulp to check all folders for any sass file
-        src: "scss/style.scss",
+        // src: "scss/main-style.scss",
         watch: "scss/**/*",
         // Compiled files will end up in whichever folder it's found in (partials are not compiled)
         dest: "public",
@@ -41,10 +41,18 @@ var gulp = require("gulp"),
 var browserSync = require("browser-sync").create();
 // ...
 
-function style() {
+function styleMain() {
+    return style( "scss/main.scss");
+}
+
+function stylePortfolio() {
+    return style( "scss/portfolio.scss");
+}
+
+function style(src) {
     return (
         gulp
-            .src(paths.styles.src)
+            .src(src)
             .pipe(sourcemaps.init())
             .pipe(sass())
             .on("error", sass.logError)
@@ -57,21 +65,21 @@ function style() {
     );
 }
 
-function js() {
+// function js() {
 
-    return browserify({ entries: 'src/main.js' })
-        .transform(babelify, { presets: ['es2015'] })
-        // .transform(vueify)
-        .bundle()
+//     return browserify({ entries: 'src/main.js' })
+//         .transform(babelify, { presets: ['es2015'] })
+//         // .transform(vueify)
+//         .bundle()
 
 
-        .pipe(source('app.js'))
-        .pipe(buffer())
-        // .pipe(uglify())
-        .pipe(gulp.dest('public'))
-    // .pipe(reload());
+//         .pipe(source('app.js'))
+//         .pipe(buffer())
+//         // .pipe(uglify())
+//         .pipe(gulp.dest('public'))
+//     // .pipe(reload());
 
-}
+// }
 
 // A simple task to reload the page
 function reload() {
@@ -79,7 +87,8 @@ function reload() {
 }
 
 function watch() {
-    style();
+    styleMain();
+    stylePortfolio();
     // js();
     reload();
     browserSync.init({
@@ -87,9 +96,10 @@ function watch() {
             baseDir: "./"
         }
     });
-    gulp.watch(paths.styles.src, style);
+    // gulp.watch( "scss/main-style.scss", styleMain);
 
-    gulp.watch(paths.styles.watch, style);
+    gulp.watch(paths.styles.watch, styleMain);
+    gulp.watch(paths.styles.watch, stylePortfolio);
     
     // gulp.watch(paths.js.src, js);
     // gulp.watch(paths.vue.src, vue);

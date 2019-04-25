@@ -1,0 +1,167 @@
+@import "reset.scss";
+@import "variables.scss";
+@import "footer.scss";
+@import "header.scss";
+// @import "buttons.scss";
+@import "fonts.scss";
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.container {
+  max-width: 1630px;
+  width: 100%;
+  margin: auto;
+  padding: 0 60px;
+}
+
+.top-block {
+  background: url(../img/tac-bg.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: calc(100% - 100px);
+  &__info {
+    position: relative;
+    height: calc(100% - 135px);
+    .container {
+      //   position: absolute;
+      display: flex;
+      height: 100%;
+      align-items: flex-end;
+    }
+    &--wrapper {
+      width: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      top: 43px;
+      position: relative;
+    }
+    &--title {
+      font-size: 44px;
+      text-transform: uppercase;
+      color: #fff;
+      font-weight: 800;
+      //   margin-top: 30px;
+    }
+    &--descr {
+      margin-top: 20px;
+      color: #fff;
+      font-size: 16px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      line-height: 1.5em;
+    }
+    &--logo {
+      margin-top: 55px;
+      background: #fff;
+      width: 344px;
+      padding: 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+main {
+    padding-top: 106px;
+}
+
+section {
+    &.designed {
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .left {
+            width:50%;
+            margin-top: 98px;
+        }
+        .right {
+            width: 50%;
+        }
+        .grey-block {
+            width: 100%;
+            padding: 20px 0;
+            position: relative;
+            &:after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                left: 40px;
+                top: 0;
+                position: absolute;
+                background: #fafafa;
+            }
+            &__title {
+                font-size: 48px;
+                text-transform: uppercase;
+                font-weight: 800;
+                position: relative;
+                z-index: 1;
+            }
+            &__descr {
+                margin-top: 38px;
+                font-size: 24px;
+                font-family: "Roboto", sans-serif;
+                position: relative;
+                z-index: 1;
+                width: 40%;
+                font-weight: 300;
+            }
+        }
+        .blue-block {
+            padding: 20px;
+            background: #082349;
+            margin-top: 30px;
+            color:#fff;
+            position: relative;
+            height: 430px;
+            img {
+                position: absolute;
+                right: -26px;
+                top: -171px;
+                width: 509px;
+            }
+        }
+
+        .list {
+            margin-top: 90px;
+            width: 80%;
+            &__title {
+                font-size: 24px;
+                font-family: "Roboto", sans-serif;
+                font-weight: 300;
+                & ~ .list__title {
+                    margin-top: 70px;
+                }
+            }
+            &__item {
+                font-family: "Roboto", sans-serif;
+                font-weight: 300;
+                font-size: 24px;
+                position: relative;
+                padding-left: 27px;
+                margin-top: 16px;
+                line-height: 1.5em;
+                letter-spacing: 0px;
+                // display: flex;
+                // align-items: center;
+                // justify-content: flex-start;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 16px;
+                    left: 0;
+                    display: block;
+                    border-radius: 100%;
+                    width: 7px;
+                    height: 7px;
+                    background: #000;
+                }
+            }
+        }
+    }
+}

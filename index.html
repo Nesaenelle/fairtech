@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Fairtech</title>
-    <link rel="stylesheet" href="public/style.css" />
+    <link rel="stylesheet" href="public/main.css" />
     <!-- Fix for iOS Safari zooming bug -->
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />
@@ -13,7 +13,8 @@
 </head>
 
 <body class="">
-
+    <div class="overlay"></div>
+    
     <div class="lamp">
         <div class="lamp__img"><img src="img/lamp.png" alt=""></div>
     </div>
@@ -70,16 +71,14 @@
             </div>
         </div>
         <div class="break"></div>   
-        <form class="form">
+        <form class="form" id="main-form">
             <div class="form--title">Разработка веб и мобильных
                 проектов любой сложности</div>
-            <input type="text" placeholder="Имя" required>
-            <input type="text" placeholder="Номер телефона" required>
+            <input type="text" placeholder="Имя" required name="name">
+            <input type="text" placeholder="Номер телефона" required name="phone">
             <button class="btn" type="submit">Отправить</button>
         </form>
     </div>
-
-    <div class="overlay"></div>
 
     <div class="light-btn">
         <div class="light-btn__img" data-toggle-light></div>
