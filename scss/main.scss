@@ -9,6 +9,10 @@ body {
   overflow: hidden;
   user-select: none;
   &.on {
+    .tags__item {
+      animation: fadeIn 1s linear;
+      animation-fill-mode: forwards;
+    }
     .light-btn__img {
       background: url(../img/on.png) no-repeat;
       background-size: cover;
@@ -21,6 +25,16 @@ body {
       // z-index: 0;
       &:after {
         content: "";
+      }
+      &__img {
+        img {
+          &:first-child {
+            display: none;
+          }
+          &:last-child {
+            display: block;
+          }
+        }
       }
     }
     .light-btn__arrows,
@@ -118,7 +132,10 @@ body {
     color: #fff;
     text-transform: uppercase;
     font-family: "Anton";
-
+    
+    opacity: 0;
+    visibility: hidden;
+  
     &:after {
       content: "";
       right: -22px;
@@ -140,6 +157,7 @@ body {
       left: 10.1%;
       top: 41.8%;
       font-size: 18px;
+      animation-delay: 2s!important;
       @media screen and (max-width: 1440px) {
       }
       @media screen and (max-width: 1024px) {
@@ -170,6 +188,7 @@ body {
       left: 23.8%;
       top: 14%;
       font-size: 36px;
+      animation-delay: 0.5s!important;
       @media screen and (max-width: 1440px) {
         font-size: 24px;
       }
@@ -196,6 +215,7 @@ body {
       left: 56.6%;
       top: 10.5%;
       font-size: 18px;
+      animation-delay: 1.5s!important;
       @media screen and (max-width: 1440px) {
         display: none;
       }
@@ -211,6 +231,7 @@ body {
       left: 20.4%;
       top: 73.3%;
       font-size: 24px;
+      animation-delay: 1s!important;
       @media screen and (max-width: 1440px) {
         // display: none;
         right: 20%;
@@ -236,6 +257,7 @@ body {
       right: 20%;
       top: 33%;
       font-size: 36px;
+      animation-delay: 0s!important;
       @media screen and (max-width: 1440px) {
         // display: none;
         font-size: 24px;
@@ -652,7 +674,7 @@ body {
   z-index: 2;
   &.blink {
     &:after {
-      display: none;
+      opacity: 0;
     }
   }
   // &:before {
@@ -676,15 +698,25 @@ body {
     background-position: center top;
     position: absolute;
     // z-index: 1;
-    @media screen and (max-width: 480px) and (max-height: 740px) {
-      transform: translate(0, -50px);
+    transform: translate(0, -5px);
+    @media screen and (max-width: 1280px) {
+      transform: translate(0, 0px);
+    }
+    @media screen and (max-width: 1024px) {
+      transform: translate(0, -5px);
+    }
+    @media screen and (max-width: 768px) {
+      transform: translate(0, -4px);
+    }
+    @media screen and (max-width: 480px) {
+      transform: translate(0, -2px);
     }
     @media screen and (max-width: 480px) and (max-height: 740px) {
       transform: translate(0, -80px);
     }
   }
   &__img {
-    transform: translateX(42px);
+    transform: translate(44px, 0);
     position: relative;
     z-index: 2;
     @media screen and (max-width: 1280px) {
@@ -707,6 +739,12 @@ body {
     }
     img {
       width: 138px;
+      &:first-child {
+        display: block;
+      }
+      &:last-child {
+        display: none;
+      }
       @media screen and (max-width: 1280px) {
         width: 130px;
       }
@@ -915,14 +953,14 @@ body {
     transform: translate(0, -20px);
   }
 }
-// @keyframes startArrowScale {
-//   0% {
-//     transform: scale(1);
-//   }
-//   25% {
-//     transform: scale(0.6);
-//   }
-//   100% {
-//     transform: scale(0.6);
-//   }
-// }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+   opacity: 1;
+   visibility: visible;
+  }
+}
