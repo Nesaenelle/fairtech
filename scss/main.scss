@@ -17,6 +17,9 @@ body {
       background: url(../img/on.png) no-repeat;
       background-size: cover;
     }
+    .light-btn {
+
+    }
     .overlay {
       opacity: 0;
       visibility: hidden;
@@ -39,8 +42,9 @@ body {
     }
     .light-btn__arrows,
     .light-btn__title {
-      opacity: 0;
-      visibility: hidden;
+      display: none;
+      // opacity: 0;
+      // visibility: hidden;
     }
     .light-on .form,  .yaer-number, .tags__item, .light-on .counter, .mushes__one, .mushes__two{
       z-index: 2;
@@ -277,6 +281,7 @@ body {
         right: 15px;
         font-size: 12px;
         top: 110px;
+        display: none;
       }
       &:after {
         right: auto;
@@ -304,6 +309,7 @@ body {
     align-content: flex-start;
     padding: 80px 0 0 0;
   }
+
   header {
     display: flex;
     // height: 100px;
@@ -395,8 +401,11 @@ body {
     @media screen and (max-width: 768px) {
       padding: 0 20px;
     }
+    @media screen and (max-width: 480px) {
+      margin-top: 30px;
+    }
     @media screen and (max-width: 768px) and (max-height: 640px) {
-      margin: auto;
+      margin: 0px auto 0;
     }
     &--title {
       color: #fff;
@@ -528,6 +537,34 @@ body {
     @media screen and (max-width: 480px) and (max-height: 640px) {
       height: 180px;
     }
+
+    .tags {
+      display: none;
+      margin-top: 10px;
+      @media screen and (max-width: 480px) {
+       display: block;;
+      }
+      @media screen and (max-width: 768px) and (max-height: 640px) {
+        display: none;
+      }
+      &__item {
+        &:first-child {
+          animation: none;
+          position: relative;
+          left: auto;
+          top: auto;
+          opacity: 1;
+          visibility: visible;
+          font-size: 20px;
+          display: inline-block;
+          right: auto;
+          letter-spacing: 1px;
+          &:after {
+            content: none;
+          }
+        }
+      }
+    }
     &__yaer {
       font-size: 150px;
       line-height: 144px;
@@ -570,6 +607,7 @@ body {
       }
       @media screen and (max-width: 480px) {
         font-size: 24px;
+        font-weight: 600;
         letter-spacing: 10px;
       }
       @media screen and (max-width: 480px) and (max-height: 640px) {
@@ -585,6 +623,9 @@ body {
       @media screen and (max-width: 768px) {
         max-width: 350px;
         margin: 30px auto 0;
+      }
+      @media screen and (max-width: 480px) {
+        margin: 15px auto 0;
       }
       @media screen and (max-width: 480px) and (max-height: 640px) {
         margin: 15px auto 0;
@@ -778,9 +819,9 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  bottom: 132px;
-  width: 100px;
-  height: 100px;
+  bottom: 52px;
+  width: 105px;
+  // height: 100px;
   position: absolute;
   display: flex;
   // flex-flow: column;
@@ -789,19 +830,21 @@ body {
   align-items: flex-start;
   z-index: 4;
   @media screen and (max-width: 1280px) {
+    // bottom: 2%;
+    // height: 55px;
     bottom: 2%;
-    height: 55px;
+        flex-direction: column-reverse;
   }
-  @media screen and (max-width: 1024px) {
-    height: 50px;
-  }
-  @media screen and (max-width: 1024px) {
-    height: 50px;
-  }
-  @media screen and (max-width: 480px) and (max-height: 640px) {
-    height: 50px;
-    bottom: 3%;
-  }
+  // @media screen and (max-width: 1024px) {
+  //   height: 50px;
+  // }
+  // @media screen and (max-width: 1024px) {
+  //   height: 50px;
+  // }
+  // @media screen and (max-width: 480px) and (max-height: 640px) {
+  //   height: 50px;
+  //   bottom: 3%;
+  // }
   &__arrows {
     width: 100%;
     text-align: center;
@@ -815,7 +858,7 @@ body {
       animation: startArrow 1s linear infinite;
     }
     @media screen and (max-width: 1280px) {
-      display: none;
+      transform: rotate(180deg) translateY(20px);
     }
     &--small {
       position: relative;
@@ -852,18 +895,19 @@ body {
     height: 61px;
     background: url(../img/off.png) no-repeat;
     background-size: cover;
-    @media screen and (max-width: 1024px) {
-      width: 55px;
-      height: 55px;
-    }
-    @media screen and (max-width: 480px) {
-      width: 50px;
-      height: 50px;
-    }
-    @media screen and (max-width: 480px) and (max-height: 640px) {
-      width: 50px;
-      height: 50px;
-    }
+    margin: auto;
+    // @media screen and (max-width: 1024px) {
+    //   width: 55px;
+    //   height: 55px;
+    // }
+    // @media screen and (max-width: 480px) {
+    //   width: 50px;
+    //   height: 50px;
+    // }
+    // @media screen and (max-width: 480px) and (max-height: 640px) {
+    //   width: 50px;
+    //   height: 50px;
+    // }
   }
   &__title {
     color: #fff;
@@ -874,18 +918,13 @@ body {
     transition: 0.2s;
     opacity: 1;
     visibility: visible;
+    text-align: center;
+    width: 100%;
     @media screen and (max-width: 1280px) {
       font-size: 20px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 100px;
-      margin: auto;
-      height: 20px;
     }
     @media screen and (max-width: 480px) {
       font-size: 16px;
-      left: 90px;
     }
   }
 }
