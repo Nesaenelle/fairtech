@@ -17,8 +17,20 @@ body {
       background: url(../img/on.png) no-repeat;
       background-size: cover;
     }
+    .light-on header {
+      z-index: 2;
+    }
     .light-btn {
-
+      &__img {
+        img {
+          &:first-child {
+            display: none;
+          }
+          &:last-child {
+            display: block;
+          }
+        }
+      }
     }
     .overlay {
       opacity: 0;
@@ -40,11 +52,18 @@ body {
         }
       }
     }
+    .light-btn {
+      pointer-events: none;
+    }
+    .light-btn__img {
+      pointer-events: auto;
+    }
     .light-btn__arrows,
     .light-btn__title {
-      display: none;
-      // opacity: 0;
-      // visibility: hidden;
+      // display: none;
+      opacity: 0;
+      visibility: hidden;
+
     }
     .light-on .form,  .yaer-number, .tags__item, .light-on .counter, .mushes__one, .mushes__two{
       z-index: 2;
@@ -102,9 +121,13 @@ body {
     @media screen and (max-width: 480px) and (max-height: 740px) {
       top: 220px;
     }
+    @media screen and (max-height: 740px) { 
+      top: 250px;
+    }
     @media screen and (max-width: 480px) and (max-height: 640px) {
       top: 200px;
     }
+
   }
 
   &__two {
@@ -123,6 +146,9 @@ body {
     }
     @media screen and (max-width: 480px) and (max-height: 740px) {
       top: 220px;
+    }
+    @media screen and (max-height: 740px) { 
+      top: 250px;
     }
     @media screen and (max-width: 480px) and (max-height: 640px) {
       top: 200px;
@@ -333,6 +359,11 @@ body {
     align-items: center;
     padding: 60px 69px 0 78px;
     width: 100%;
+    position: relative;
+    z-index: 1;
+    @media screen and (max-width: 1360px) and(max-height: 720px){ 
+      padding: 30px 40px 0 40px;
+    }
     @media screen and (max-width: 1280px) {
       position: absolute;
       padding: 40px 40px 0 40px;
@@ -408,6 +439,9 @@ body {
       max-width: 360px;
       right: 35px;
     }
+    @media screen and (max-width: 1360px) and(max-height: 720px){ 
+      bottom: 20px;
+    }
     @media screen and (max-width: 1280px) {
       // left: 0;
       // right: 0;
@@ -435,6 +469,9 @@ body {
       letter-spacing: 3.5px;
       margin-bottom: 30px;
       font-weight: 600;
+      @media screen and (max-width: 1360px) and(max-height: 720px){ 
+        font-size: 18px;
+      }
       @media screen and (max-width: 1280px) {
         text-align: center;
         font-size: 20px;
@@ -541,6 +578,9 @@ body {
     width: 100%;
 
     text-align: center;
+    @media screen and (max-width: 1360px) and(max-height: 720px){ 
+      height: 300px;
+    }
     @media screen and (max-width: 1280px) {
       position: relative;
       left: auto;
@@ -597,6 +637,9 @@ body {
         font-size: 140px;
         // line-height: 120px;
       }
+      @media screen and (max-width: 1360px) and(max-height: 720px){ 
+        font-size: 120px;
+      }
       @media screen and (max-width: 1280px) {
 
       }
@@ -649,6 +692,9 @@ body {
       justify-content: space-between;
       // margin-top: 36px;
       margin: 36px auto 0;
+      @media screen and (max-width: 1360px) and(max-height: 720px){ 
+        max-width: 440px;
+      }
       @media screen and (max-width: 768px) {
         max-width: 350px;
         margin: 30px auto 0;
@@ -669,6 +715,10 @@ body {
         @media screen and (max-width: 1440px) {
           font-size: 60px;
           margin: 0 12px;
+        }
+        @media screen and (max-width: 1360px) and(max-height: 720px){ 
+          margin: 0 0px;
+          font-size: 48px;
         }
         @media screen and (max-width: 1280px) {
           font-size: 48px;
@@ -692,6 +742,9 @@ body {
         position: relative;
         @media screen and (max-width: 1440px) {
           font-size: 64px;
+        }
+        @media screen and (max-width: 1360px) and(max-height: 720px){ 
+          font-size: 54px;
         }
         @media screen and (max-width: 1280px) {
           // font-size: 6px;
@@ -773,6 +826,9 @@ body {
     position: absolute;
     // z-index: 1;
     transform: translate(0, -5px);
+    @media screen and (max-width: 1360px) and(max-height: 720px){ 
+      transform: translate(0, -70px);
+    }
     @media screen and (max-width: 1280px) {
       transform: translate(0, 0px);
     }
@@ -793,6 +849,9 @@ body {
     transform: translate(44px, 0);
     position: relative;
     z-index: 2;
+    @media screen and (max-width: 1360px) and(max-height: 720px){ 
+      transform: translate(44px, -80px);
+    }
     @media screen and (max-width: 1280px) {
       transform: translate(41px, -4px);
     }
@@ -862,6 +921,9 @@ body {
   justify-content: center;
   align-items: flex-start;
   z-index: 4;
+  @media screen and (max-width: 1360px) and(max-height: 720px){ 
+    bottom: 0;
+  }
   @media screen and (max-width: 1280px) {
     // bottom: 2%;
     // height: 55px;
@@ -889,6 +951,9 @@ body {
     // overflow: hidden;
     &--wrapper {
       animation: startArrow 1s linear infinite;
+    }
+    @media screen and (min-width: 1280px) and(max-height: 720px){ 
+      display: none;
     }
     @media screen and (max-width: 1280px) {
       transform: rotate(180deg) translateY(20px);
@@ -926,9 +991,17 @@ body {
     cursor: pointer;
     width: 61px;
     height: 61px;
-    background: url(../img/off.png) no-repeat;
+    // background: url(../img/off.png) no-repeat;
     background-size: cover;
     margin: auto;
+    img {
+      &:first-child {
+        display: block;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
     // @media screen and (max-width: 1024px) {
     //   width: 55px;
     //   height: 55px;

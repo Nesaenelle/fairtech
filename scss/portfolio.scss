@@ -15,6 +15,55 @@ body {
   padding: 0 60px;
 }
 
+.go-top {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 61px;
+  height: 61px;
+  background: #08254d;
+  border-radius: 100%;
+  cursor: pointer;
+  &:hover {
+    &:after {
+      width: calc(100% + 58px);
+      height: calc(100% + 58px);
+      left: -29px;
+      top: -29px;
+    }
+    &:before {
+      width: calc(100% + 30px);
+      height: calc(100% + 30px);
+      left: -15px;
+      top: -15px;
+    }
+  }
+  &:after {
+    content: '';
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+    left: -25px;
+    top: -25px;
+    border-radius: 100%;
+    border: 1px solid #dae6f8;
+    position: absolute;
+    transition: 0.3s;
+      transition-delay: 0.2s;
+  }
+  &:before {
+    content: '';
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    left: -12px;
+    top: -12px;
+    border-radius: 100%;
+    border: 1px solid #658abd;
+    position: absolute;
+    transition: 0.3s;
+      transition-delay: 0s;
+  }
+}
+
 .top-block {
   background: url(../img/tac-bg.png) no-repeat;
   background-size: cover;
