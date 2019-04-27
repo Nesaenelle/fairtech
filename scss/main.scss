@@ -84,9 +84,17 @@ body {
     font-size: 300px;
     line-height: 230px;
   }
+  @media screen and (max-width: 1360px) and(max-height: 800px){ 
+    font-size: 260px;
+    line-height: 220px;
+  }
+  @media screen and (max-width: 1360px) and(max-height: 740px){ 
+    font-size: 230px;
+    line-height: 200px;
+  }
   @media screen and (max-width: 1280px) {
     font-size: 250px;
-    line-height: 190px;
+    line-height: 190px;  
   }
   @media screen and (max-width: 1024px) {
     font-size: 180px;
@@ -499,6 +507,10 @@ body {
       @media screen and (max-width: 1280px) and (max-height: 840px) {
         font-size: 18px;
       }
+      @media screen and (max-width: 1024px) and (max-height: 740px) {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
       @media screen and (max-width: 480px) {
         font-size: 16px;
         margin-bottom: 15px;
@@ -528,6 +540,10 @@ body {
         padding: 6px 0 10px 0;
         margin-bottom: 15px;
         // font-size: 16px;
+      }
+      @media screen and (max-width: 1024px) and (max-height: 740px) {
+        padding: 4px 0 8px 0;
+        margin-bottom: 8px;
       }
       @media screen and (max-width: 768px) {
         padding: 5px 0 8px 0;
@@ -569,6 +585,9 @@ body {
       @media screen and (max-width: 1280px) {
         // font-size: 16px;
         padding: 13px 0 11px 0;
+      }
+      @media screen and (max-width: 1024px) and (max-height: 740px) {
+        padding: 11px 0 9px 0;
       }
       @media screen and (max-width: 768px) {
         // padding: 10px 0 8px 0;
@@ -614,6 +633,9 @@ body {
     }
     @media screen and (max-width: 1280px) and (max-height: 840px) {
       height: 260px;
+    }
+    @media screen and (max-width: 1024px) and (max-height: 740px) {
+      height: 240px;
     }
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -677,6 +699,9 @@ body {
       @media screen and (max-width: 1024px) {
 
       }
+      @media screen and (max-width: 1024px) and (max-height: 740px) {
+          font-size: 80px;
+      }
       @media screen and (max-width: 768px) {
         // font-size: 120px;
         // line-height: 110px;
@@ -712,6 +737,10 @@ body {
         font-size: 20px;
         letter-spacing: 15px;
       }
+      @media screen and (max-width: 1024px) and (max-height: 740px) {
+        font-size: 18px;
+        letter-spacing: 12px;
+      }
       @media screen and (max-width: 480px) {
         font-size: 24px;
         font-weight: 600;
@@ -732,7 +761,13 @@ body {
       }
       @media screen and (max-width: 1280px) and (max-height: 840px) {
         max-width: 460px;
+        margin: 25px auto 0;
       }
+
+      @media screen and (max-width: 1024px) and (max-height: 740px) {
+        margin: 15px auto 0;
+      }
+
       @media screen and (max-width: 768px) {
         max-width: 350px;
         margin: 30px auto 0;
@@ -796,6 +831,9 @@ body {
         }
         @media screen and (max-width: 1024px) {
 
+        }
+        @media screen and (max-width: 1024px) and (max-height: 740px) {
+          font-size: 42px;
         }
         @media screen and (max-width: 768px) {
           font-size: 42px;
@@ -871,8 +909,8 @@ body {
     position: absolute;
     pointer-events: none;
 
-    @media screen and (max-width: 1360px) and(max-height: 740px){ 
-
+    @media screen and (max-width: 1360px) and(max-height: 800px){ 
+      top: 44px;
     }
     @media screen and (max-width: 1280px) {
       top: 70px;
@@ -884,6 +922,12 @@ body {
     @media screen and (max-width: 1024px) {
  
       top: 65px;
+    }
+    @media screen and (max-width: 1024px) and (max-height: 800px) {
+      top: 40px;
+    }
+    @media screen and (max-width: 1024px) and (max-height: 740px) {
+      top: 10px;
     }
     @media screen and (max-width: 768px) {
       top: 62px;
@@ -902,7 +946,7 @@ body {
     transform: translate(44px, 0);
     position: relative;
     z-index: 2;
-    @media screen and (max-width: 1360px) and(max-height: 740px){ 
+    @media screen and (max-width: 1360px) and(max-height: 800px){ 
       transform: translate(44px, -80px);
     }
     @media screen and (max-width: 1280px) {
@@ -913,6 +957,12 @@ body {
     // }
     @media screen and (max-width: 1024px) {
       transform: translate(38px, -37px);
+    }
+    @media screen and (max-width: 1024px) and (max-height: 800px) {
+      transform: translate(38px, -62px);
+    }
+    @media screen and (max-width: 1024px) and (max-height: 740px) {
+      transform: translate(38px, -92px);
     }
     @media screen and (max-width: 768px) {
       transform: translate(37px, -34px);
