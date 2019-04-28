@@ -1095,6 +1095,9 @@ main {
       @media screen and (max-width: 600px) {
         padding: 0 15px;
       }
+      @media screen and (max-width: 375px) {
+        display: none;
+      }
     }
     &__prev,
     &__next {
