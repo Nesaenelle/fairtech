@@ -71,16 +71,10 @@ body {
   }
   &:hover {
     &:after {
-      width: calc(100% + 58px);
-      height: calc(100% + 58px);
-      left: -30px;
-      top: -30px;
+      transform: scale(1.1);
     }
     &:before {
-      width: calc(100% + 30px);
-      height: calc(100% + 30px);
-      left: -16px;
-      top: -16px;
+      transform: scale(1.1);
     }
   }
   &:after {
@@ -92,9 +86,19 @@ body {
     border-radius: 100%;
     border: 1px solid #eff0f3;
     position: absolute;
-    transition: 0.1s;
+    transition: 0.2s;
     transition-delay: 0.1s;
     @media screen and (max-width: 1280px) {
+      width: calc(100% + 34px);
+      height: calc(100% + 34px);
+      left: -18px;
+      top: -18px;
+    }
+    @media screen and (max-width: 1024px) {
+      width: calc(100% + 26px);
+      height: calc(100% + 26px);
+      left: -14px;
+      top: -14px;
     }
   }
   &:before {
@@ -106,9 +110,19 @@ body {
     border-radius: 100%;
     border: 1px solid #8593a7;
     position: absolute;
-    transition: 0.1s;
+    transition: 0.2s;
     transition-delay: 0s;
     @media screen and (max-width: 1280px) {
+      width: calc(100% + 16px);
+      height: calc(100% + 16px);
+      left: -9px;
+      top: -9px;
+    }
+    @media screen and (max-width: 1024px) {
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      left: -7px;
+      top: -7px;
     }
   }
 }
@@ -883,7 +897,7 @@ main {
 
   .blue-label {
     width: 870px;
-    margin-top: 138px;
+    margin-top: 142px;
     padding: 48px 38px 31px 38px;
     background: #08254d;
     font-size: 48px;
@@ -995,7 +1009,7 @@ main {
       position: absolute;
 
       bottom: -49px;
-      left: -49px;
+      left: 0;
       right: 0;
       z-index: 1;
       @media screen and (max-width: 1280px) {
@@ -1201,8 +1215,9 @@ main {
       }
     }
     &__prev {
-      padding: 20px 20px 13px 25px;
+      padding: 20px 20px 13px 20px;
       text-align: right;
+      width: 250px;
       @media screen and (max-width: 1280px) and (min-width: 769px) {
         padding: 14px 20px 10px 20px;
         width: 200px;
@@ -1239,8 +1254,9 @@ main {
       }
     }
     &__next {
-      padding: 20px 91px 13px 26px;
+      padding: 20px 20px 13px 20px;
       text-align: left;
+      width: 250px;
       @media screen and (max-width: 1280px) and (min-width: 769px) {
         padding: 14px 20px 10px 20px;
         width: 200px;
