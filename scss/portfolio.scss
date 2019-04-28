@@ -330,9 +330,9 @@ main {
       top: 0;
       position: absolute;
       background: #fafafa;
-      @media screen and (max-width: 768px) {
-        left: -20px;
-      }
+      // @media screen and (max-width: 768px) {
+      //   left: -20px;
+      // }
       @media screen and (max-width: 375px) {
         left: -15px;
         width: calc(100% + 30px);
@@ -377,9 +377,61 @@ main {
       }
       @media screen and (max-width: 480px) {
         font-size: 16px;
+        margin-top: 5px;
       }
     }
   }
+
+  .blue-block-right {
+    // padding: 20px;
+    background: #082349;
+    margin-top: 30px;
+    color: #fff;
+    // position: relative;
+    // height: 430px;
+    &.mobile {
+      display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+      @media screen and (max-width: 480px) {
+        margin-top: 0;
+      }
+    }
+    &.desktop {
+      display: block;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    &__text {
+      padding: 44px 57px 44px 46px;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.5em;
+      @media screen and (max-width: 1280px) {
+        font-size: 18px;
+        padding: 30px 30px 30px 30px;
+      }
+      @media screen and (max-width: 1024px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 14px;
+        padding: 30px 20px 30px 20px;
+      }
+      b {
+        font-weight: 500;
+      }
+      p + p {
+        margin-top: 15px;
+      }
+    }
+  }
+
   .designed-left {
     width: calc(50%- 14px);
     margin-top: 88px;
@@ -412,6 +464,10 @@ main {
       @media screen and (max-width: 480px) {
         height: auto;
         padding: 20px 20px 40px 20px;
+      }
+      @media screen and (max-width: 375px) {
+        left: -15px;
+        width: calc(100% + 30px);
       }
       // @media screen and (max-width: 768px) {
       //   height: 430px;
@@ -553,36 +609,7 @@ main {
       padding-right: 0px;
       margin-top: 0;
     }
-    .blue-block {
-      // padding: 20px;
-      background: #082349;
-      margin-top: 30px;
-      color: #fff;
-      // position: relative;
-      // height: 430px;
-      &__text {
-        padding: 44px 57px 44px 46px;
-        font-size: 24px;
-        font-weight: 300;
-        line-height: 1.5em;
-        @media screen and (max-width: 1280px) {
-          font-size: 18px;
-          padding: 30px 30px 30px 30px;
-        }
-        @media screen and (max-width: 1024px) {
-          font-size: 14px;
-        }
-        @media screen and (max-width: 768px) {
-          display: none;
-        }
-        b {
-          font-weight: 500;
-        }
-        p + p {
-          margin-top: 15px;
-        }
-      }
-    }
+
     .screenshot {
       width: 100%;
       margin-top: 32px;
@@ -907,23 +934,22 @@ main {
         right: 20px;
         left: auto;
         width: 46%;
-        // width: 340px;
       }
       @media screen and (max-width: 680px) {
         display: none;
       }
-      // @media screen and (max-width: 600px) {
-      //   width: 265px;
-      //   left: 260px;
-      //   top: 50px;
-      // }
-      // @media screen and (max-width: 480px) {
-      //   width: 212px;
-      //   left: 230px;
-      //   height: 1px;
-      //   top: 35px;
-      //   display: none;
-      // }
+      @media screen and (max-width: 480px) {
+        width: 245px;
+        left: 158px;
+        display: block;
+        bottom: 38px;
+        top: auto;
+      }
+      @media screen and (max-width: 375px) {
+        bottom: 36px;
+        width: 150px;
+        left: 145px;
+      }
     }
   }
 
@@ -986,6 +1012,9 @@ main {
         letter-spacing: 4px;
         @media screen and (max-width: 1280px) {
           font-size: 61px;
+        }
+        @media screen and (max-width: 980px) {
+          font-size: 54px;
         }
         @media screen and (max-width: 768px) {
           font-size: 64px;
