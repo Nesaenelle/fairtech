@@ -867,12 +867,15 @@ main {
       bottom: -49px;
       left: -49px;
       right: 0;
+      z-index: 1;
       @media screen and (max-width: 1280px) {
         // width: 58%;
         padding: 15px 20px 40px;
         left: 0;
       }
       @media screen and (max-width: 1024px) {
+        padding: 15px 20px 20px;
+        bottom: -20px;
       }
       @media screen and (max-width: 768px) {
         position: relative;
@@ -1003,6 +1006,10 @@ main {
       padding: 0 31px;
       @media screen and (max-width: 1280px) {
         padding: 0 20px;
+        margin-top: 40px;
+      }
+      @media screen and (max-width: 1024px) {
+        margin-top: 30px;
       }
       @media screen and (max-width: 768px) {
         margin-top: 45px;
@@ -1051,11 +1058,17 @@ main {
     &__prev {
       padding: 20px 20px 13px 25px;
       @media screen and (max-width: 1280px) and (min-width: 769px) {
-        padding: 14px 27px 10px 33px;
+        padding: 14px 20px 10px 20px;
+        width: 200px;
+        text-align: right;
+      }
+      @media screen and (max-width: 1024px) and (min-width: 769px) {
+        width: 160px;
+        padding: 10px 10px 6px 10px;
       }
       @media screen and (max-width: 768px) {
         width: 290px;
-        text-align: right;
+
         padding: 20px 20px 17px 25px;
       }
       @media screen and (max-width: 600px) {
@@ -1082,11 +1095,17 @@ main {
     &__next {
       padding: 20px 91px 13px 26px;
       @media screen and (max-width: 1280px) and (min-width: 769px) {
-        padding: 14px 20px 10px 25px;
+        padding: 14px 20px 10px 20px;
+        width: 200px;
+        text-align: left;
+      }
+      @media screen and (max-width: 1024px) and (min-width: 769px) {
+        width: 160px;
+        padding: 10px 10px 6px 10px;
       }
       @media screen and (max-width: 768px) {
         width: 290px;
-        text-align: left;
+
         padding: 20px 20px 17px 25px;
         margin-left: 5px;
       }
