@@ -138,6 +138,9 @@ body {
         width: 94%;
         top: 70px;
       }
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
     }
     &--title {
       font-size: 48px;
@@ -156,10 +159,15 @@ body {
       }
       @media screen and (max-width: 600px) {
         font-size: 40px;
+        line-height: 1.2em;
       }
-      // @media screen and (max-width: 600px) {
-      //   font-size: 32px;
-      // }
+      @media screen and (max-width: 480px) {
+          margin: auto;
+          text-align: center;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 32px;
+      }
     }
     &--descr {
       margin-top: 8px;
@@ -173,6 +181,12 @@ body {
       }
       @media screen and (max-width: 1024px) and (min-width: 769px) {
         margin-top: 5px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 480px) {
+        text-align: center;
       }
     }
     &--logo {
@@ -196,11 +210,28 @@ body {
       @media screen and (max-width: 768px) {
         margin-top: 30px;
       }
+      @media screen and (max-width: 600px) {
+        // margin-top: 20px;
+        width: 250px;
+        padding: 13px 20px 15px 20px;
+        margin: 20px 0;
+      }
+      @media screen and (max-width: 480px) {
+        // margin-top: 15px;
+        width: 220px;
+        margin: 30px auto;
+      }
       img {
         @media screen and (max-width: 1280px) and (min-width: 769px) {
           width: 150px;
         }
         @media screen and (max-width: 1024px) and (min-width: 769px) {
+          width: 120px;
+        }
+        @media screen and (max-width: 600px) {
+          width: 150px;
+        }
+        @media screen and (max-width: 480px) {
           width: 120px;
         }
       }
@@ -1057,10 +1088,11 @@ main {
     }
     &__prev {
       padding: 20px 20px 13px 25px;
+      text-align: right;
       @media screen and (max-width: 1280px) and (min-width: 769px) {
         padding: 14px 20px 10px 20px;
         width: 200px;
-        text-align: right;
+      
       }
       @media screen and (max-width: 1024px) and (min-width: 769px) {
         width: 160px;
@@ -1094,10 +1126,11 @@ main {
     }
     &__next {
       padding: 20px 91px 13px 26px;
+      text-align: left;
       @media screen and (max-width: 1280px) and (min-width: 769px) {
         padding: 14px 20px 10px 20px;
         width: 200px;
-        text-align: left;
+     
       }
       @media screen and (max-width: 1024px) and (min-width: 769px) {
         width: 160px;
