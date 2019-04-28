@@ -441,6 +441,10 @@ main {
     @media screen and (max-width: 768px) {
       width: 100%;
     }
+    @media screen and (max-width: 480px) {
+      margin-top: 90%;
+    }
+
     .blue-block {
       padding: 36px 20px 20px 35px;
       background: #082349;
@@ -495,10 +499,14 @@ main {
           top: 5%;
         }
         @media screen and (max-width: 480px) {
-          // font-size: 12px;
-        // }
-        // @media screen and (max-width: 375px) {
-          display: none;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: -640px;
+          max-width: calc(75% - 1px);
+        }
+        @media screen and (max-width: 375px) {
+          top: -600px;
         }
       }
       &__logo {
@@ -514,8 +522,11 @@ main {
         }
         @media screen and (max-width: 480px) {
           max-width: 190px;
-          margin: 50px auto 20px;
+          margin: 25% auto 20px;
           display: block;
+        }
+        @media screen and (max-width: 375px) {
+          margin: 80px auto 20px;
         }
       }
       &__text {
