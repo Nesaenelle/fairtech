@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>Fairtech</title>
-    <link rel="stylesheet" href="public/portfolio.css" />
+    <link rel="stylesheet" href="public/portfolio-intro.css" />
     <!-- Fix for iOS Safari zooming bug -->
     <meta name="viewport"
         content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0, user-scalable=no" />
@@ -29,7 +29,21 @@
                         <li><a href="#"><span>MENU 1</span></a></li>
                     </ul>
                 </nav>
-                <div class="link"><a href="https://fairtech-marketing.com.ua/" target="_blank">Все работы</a></div>
+                <div class="link"><a href="#" target="_blank">Все работы</a></div>
+                <div class="burger" class="opened" data-menu-btn>
+                    <span></span>
+                </div>
+                <div class="dropdown-menu" class="opened" data-menu>
+                    <nav class="navigation">
+                        <ul>
+                            <li class="active"><a href="#"><span>MENU 1</span></a></li>
+                            <li><a href="#"><span>MENU 1</span></a></li>
+                            <li><a href="#"><span>MENU 1</span></a></li>
+                            <li><a href="#"><span>MENU 1</span></a></li>
+                            <li><a href="#"><span>MENU 1</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
 
@@ -37,14 +51,14 @@
         <div class="top-block__info">
             <div class="container">
                 <div class="top-block__info--wrapper">
-                    <div class="top-block__info--title">ТАС Страхование</div>
+                    <!-- <div class="top-block__info--title">ТАС Страхование</div>
                     <div class="top-block__info--descr">ТАС страхование, подразделение группы компаний ТАС, занимается
                         всеми
                         типами страхования на территории
                         Украины. Наши компании сотрудничают длительный период по различным направлениям.</div>
                     <div class="top-block__info--logo">
                         <img src="img/tac-logo.png" alt="">
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
@@ -54,8 +68,9 @@
 
 
     <script src="src/jquery-3.4.0.min.js"></script>
-    <script src="src/slick.min.js"></script>
-    <script src="src/portfolio.js"></script>
+    <!-- <script src="src/slick.min.js"></script> -->
+    <!-- <script src="src/portfolio.js"></script> -->
+    <script src="src/menu.js"></script>
 </body>
 
 </html>

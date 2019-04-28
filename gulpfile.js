@@ -49,6 +49,10 @@ function stylePortfolio() {
     return style( "scss/portfolio.scss");
 }
 
+function stylePortfolioIntro() {
+    return style( "scss/portfolio-intro.scss");
+}
+
 function style(src) {
     return (
         gulp
@@ -89,6 +93,7 @@ function reload() {
 function watch() {
     styleMain();
     stylePortfolio();
+    stylePortfolioIntro();
     // js();
     reload();
     browserSync.init({
@@ -100,6 +105,7 @@ function watch() {
 
     gulp.watch(paths.styles.watch, styleMain);
     gulp.watch(paths.styles.watch, stylePortfolio);
+    gulp.watch(paths.styles.watch, stylePortfolioIntro);
     
     // gulp.watch(paths.js.src, js);
     // gulp.watch(paths.vue.src, vue);
