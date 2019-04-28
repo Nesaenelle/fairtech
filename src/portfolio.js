@@ -43,7 +43,7 @@ $(document).ready(function () {
     $(window).on('scroll', function() {
         var doc = document.documentElement;
         var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-        top >= 300 ? $goTop.addClass('visible') : $goTop.removeClass('visible');
+        top >= (document.documentElement.scrollHeight - window.innerHeight  - 150) ? $goTop.addClass('visible') : $goTop.removeClass('visible');
     });
 
 });
