@@ -65,7 +65,7 @@ header .link {
       }
       &:before {
         content: "";
-        width: 100%;
+        width: calc(100% + 1px);
         height: 100%;
         left: 0;
         top: 0;
@@ -76,7 +76,7 @@ header .link {
       }
       &:after {
         content: "";
-        width: 100%;
+        width: calc(100% + 1px);
         height: 100%;
         left: 0;
         top: 0;
