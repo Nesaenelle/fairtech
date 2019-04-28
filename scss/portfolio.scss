@@ -614,6 +614,14 @@ main {
       // padding: 52px 30px 52px 50px;
       // font-size: 24px;
     }
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      padding: 20px 20px 40px 30px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 14px;
+      padding: 20px 20px 20px 20px;
+    }
   }
 
   .widget-block {
@@ -688,9 +696,11 @@ main {
       }
       @media screen and (max-width: 600px) {
         font-size: 16px;
+        padding: 20px 25px 20px 25px;
       }
       @media screen and (max-width: 480px) {
         font-size: 14px;
+        padding: 20px;
       }
       p + p {
         margin-top: 17px;
@@ -724,6 +734,9 @@ main {
     @media screen and (max-width: 768px) {
       margin-top: 70px;
       // display: none;
+    }
+    @media screen and (max-width: 600px) {
+      margin-top: 40px;
     }
     &:after {
       content: "";
