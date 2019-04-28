@@ -11,7 +11,7 @@ body {
 }
 .container {
   max-width: 1648px;
-  min-width: 320px;
+  min-width: 300px;
   width: 100%;
   margin: auto;
   padding: 0 60px;
@@ -111,7 +111,7 @@ body {
 }
 
 .top-block {
-  background: url(../img/tac-bg.png) no-repeat;
+  background: url(../img/tac-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   height: calc(100% - 100px);
@@ -613,6 +613,12 @@ main {
       }
       & ~ .list__title {
         margin-top: 70px;
+        @media screen and (max-width: 1280px) and (min-width: 769px) {
+          margin-top: 50px;
+        }
+        @media screen and (max-width: 1024px) and (min-width: 769px) {
+          margin-top: 20px;
+        }
         @media screen and (max-width: 600px) {
           margin-top: 40px;
         }
@@ -632,9 +638,12 @@ main {
       // justify-content: flex-start;
       @media screen and (max-width: 1280px) and (min-width: 769px) {
         font-size: 18px;
+        margin-top: 12px;
+        padding-left: 22px;
       }
       @media screen and (max-width: 1024px) and (min-width: 769px) {
         font-size: 14px;
+        padding-left: 20px;
       }
       @media screen and (max-width: 600px) {
         font-size: 16px;
@@ -652,6 +661,16 @@ main {
         width: 7px;
         height: 7px;
         background: #000;
+        @media screen and (max-width: 1280px) and (min-width: 769px) {
+          width: 5px;
+          height: 5px;
+          top: 10px;
+        }
+        @media screen and (max-width: 1024px) and (min-width: 769px) {
+          top: 7px;
+          width: 4px;
+          height: 4px;
+        }
       }
     }
   }
