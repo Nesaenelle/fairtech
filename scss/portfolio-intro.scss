@@ -58,8 +58,16 @@ header .link {
       height: 100%;
       border-left: 1px solid #8a97aa;
       @media screen and (max-width: 768px) {
-        display: none;
+        // animation: flipBG 0s linear;
+        background: #73839a;
+        border: none;
       }
+      // &> div {
+      //   @media screen and (max-width: 768px) {
+      //     // animation: flipBG 0s linear;
+      //     background: #73839a;
+      //   }
+      // }
       & > div:first-child {
         height: 100%;
         width: 100%;
@@ -70,6 +78,9 @@ header .link {
         backface-visibility: hidden;
         transform-style: preserve-3d;
         animation-fill-mode: forwards;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
         &:before {
           content: "";
           width: calc(100%  + 0px);
