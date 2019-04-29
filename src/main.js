@@ -31,8 +31,7 @@ $(document).ready(function () {
     blink();
 
 
-    document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
-    
+
     $('#main-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(e.target).serializeArray();
