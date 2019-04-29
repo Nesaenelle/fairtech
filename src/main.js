@@ -31,6 +31,7 @@ $(document).ready(function () {
     blink();
 
     $('input').on('blur', function() {
+        var body = $("html, body");
         body.stop().animate({ scrollTop: 0 }, 100);
     });
 
