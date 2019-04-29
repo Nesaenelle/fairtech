@@ -20,6 +20,13 @@ body {
   }
 }
 
+header {
+  position: relative;
+}
+
+.navigation {
+  margin-right: 0;
+}
 header .link {
   @media screen and (max-width: 480px) {
     display: none;
@@ -43,48 +50,57 @@ header .link {
       position: relative;
       width: calc(100% / 5);
       height: 100%;
-      animation: flipBG 1s linear;
-      backface-visibility: hidden;
-      transform-style: preserve-3d;
-      animation-fill-mode: forwards;
-      &:nth-child(1) {
+      border-left: 1px solid #8a97aa;
+      & > div {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        animation: flipBG 1s linear;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        animation-fill-mode: forwards;
+        &:before {
+          content: "";
+          width: calc(100%  + 0px);
+          height: 100%;
+          left: 0;
+          top: 0;
+          position: absolute;
+          transform: rotateY(180deg);
+          backface-visibility: hidden;
+          background: #73839a;
+        }
+        &:after {
+          content: "";
+          width: calc(100% +0px);
+          height: 100%;
+          left: 0;
+          top: 0;
+          position: absolute;
+          background: #fff;
+          backface-visibility: hidden;
+        }
+      }
+      
+      &:nth-child(1) > div {
         animation-delay: 0;
       }
-      &:nth-child(2) {
+      &:nth-child(2) > div {
         animation-delay: 0.1s;
       }
-      &:nth-child(3) {
+      &:nth-child(3) > div {
         animation-delay: 0.2s;
       }
-      &:nth-child(4) {
+      &:nth-child(4) > div {
         animation-delay: 0.3s;
       }
-      &:nth-child(5) {
+      &:nth-child(5) > div {
         animation-delay: 0.4s;
       }
-      &:hover {
-      }
-      &:before {
-        content: "";
-        width: calc(100% + 1px);
-        height: 100%;
-        left: 0;
-        top: 0;
-        position: absolute;
-        background: #73839a;
-        transform: rotateY(180deg);
-        backface-visibility: hidden;
-      }
-      &:after {
-        content: "";
-        width: calc(100% + 1px);
-        height: 100%;
-        left: 0;
-        top: 0;
-        position: absolute;
-        background: #fff;
-        backface-visibility: hidden;
-      }
+
+
     }
   }
   &__info {
@@ -125,8 +141,8 @@ header .link {
       text-align: center;
       &__wrapper {
         margin-top: -163px;
-        animation: slideInDown 2s ease-in-out;
-        animation-delay: 2s;
+        animation: slideInDown 1.5s ease-in-out;
+        animation-delay: 1.5s;
         opacity: 0;
         visibility: hidden;
         animation-fill-mode: forwards;
@@ -138,7 +154,7 @@ header .link {
         left: -48px;
         top: 21px;
         margin: auto;
-        animation: fadeIn 2s linear;
+        animation: fadeIn 1.5s linear;
         opacity: 0;
         visibility: hidden;
         animation-delay: 1s;
