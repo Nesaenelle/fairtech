@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     $('input').on('blur', function() {
         var body = $("html, body");
-        body.stop().animate({ scrollTop: 0 }, 100);
+        body.stop().animate({ scrollTop: 0 }, 0);
     });
 
     $('#main-form').on('submit', function (e) {
