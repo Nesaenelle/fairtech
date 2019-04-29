@@ -30,7 +30,9 @@ $(document).ready(function () {
 
     blink();
 
-
+    $('input').on('blur', function() {
+        body.stop().animate({ scrollTop: 0 }, 100);
+    });
 
     $('#main-form').on('submit', function (e) {
         e.preventDefault();
