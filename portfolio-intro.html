@@ -16,10 +16,23 @@
 </head>
 
 <body class="">
-    <div class="top-block">
-        <header>
-            <div class="container">
-                <div class="logo"><img src="img/logo.png" alt=""></div>
+    <header>
+        <div class="container">
+            <div class="logo"><img src="img/logo.png" alt=""></div>
+            <nav class="navigation">
+                <ul>
+                    <li class="active"><a href="#"><span>MENU 1</span></a></li>
+                    <li><a href="#"><span>MENU 1</span></a></li>
+                    <li><a href="#"><span>MENU 1</span></a></li>
+                    <li><a href="#"><span>MENU 1</span></a></li>
+                    <li><a href="#"><span>MENU 1</span></a></li>
+                </ul>
+            </nav>
+            <!-- <div class="link"><a href="#" target="_blank">Все работы</a></div> -->
+            <div class="burger" class="opened" data-menu-btn>
+                <span></span>
+            </div>
+            <div class="dropdown-menu" class="opened" data-menu>
                 <nav class="navigation">
                     <ul>
                         <li class="active"><a href="#"><span>MENU 1</span></a></li>
@@ -29,53 +42,82 @@
                         <li><a href="#"><span>MENU 1</span></a></li>
                     </ul>
                 </nav>
-                <!-- <div class="link"><a href="#" target="_blank">Все работы</a></div> -->
-                <div class="burger" class="opened" data-menu-btn>
-                    <span></span>
+            </div>
+        </div>
+    </header>
+    <div class="scroller">
+        <div class="top-block" data-project>
+            <div class="top-block__backgrounds">
+                <div class="top-block__backgrounds--bg">
+
+                    <div></div>
+                    <div class="projects__title projects__title_preview left">ТАС Страхование</div>
                 </div>
-                <div class="dropdown-menu" class="opened" data-menu>
-                    <nav class="navigation">
-                        <ul>
-                            <li class="active"><a href="#"><span>MENU 1</span></a></li>
-                            <li><a href="#"><span>MENU 1</span></a></li>
-                            <li><a href="#"><span>MENU 1</span></a></li>
-                            <li><a href="#"><span>MENU 1</span></a></li>
-                            <li><a href="#"><span>MENU 1</span></a></li>
-                        </ul>
-                    </nav>
+                <div class="top-block__backgrounds--bg"><div></div></div>
+                <div class="top-block__backgrounds--bg"><div></div></div>
+                <div class="top-block__backgrounds--bg"><div></div></div>
+                <div class="top-block__backgrounds--bg">
+                    <div></div>
+                    <div class="projects__title projects__title_preview right">ТАС Страхование</div>
                 </div>
             </div>
-        </header>
-        <div class="top-block__backgrounds">
-            <div class="top-block__backgrounds--bg"><div></div></div>
-            <div class="top-block__backgrounds--bg"><div></div></div>
-            <div class="top-block__backgrounds--bg"><div></div></div>
-            <div class="top-block__backgrounds--bg"><div></div></div>
-            <div class="top-block__backgrounds--bg"><div></div></div>
-        </div>
 
-        <div class="top-block__info">
-            <div class="container">
-                <div class="projects">
-                    <img src="img/portfolio-intro.png" alt="">
-                    <div class="projects__wrapper">
-                        <div class="projects__title">ТАС Страхование</div>
-                        <div class="projects__subtitle">Website</div>
-                        <div class="projects__date">April 2019</div>
+            <div class="top-block__info">
+                <div class="container">
+                    <div class="projects">
+                        <img src="img/portfolio-intro.png" alt="">
+
+                        <div class="projects__wrapper">
+                            <div class="projects__title">ТАС Страхование</div>
+                            <div class="projects__subtitle">Website</div>
+                            <div class="projects__date">April 2019</div>
+                        </div>
                     </div>
+                    <!-- <div class="link"><a href="#" target="_blank">Все работы</a></div> -->
                 </div>
-                <!-- <div class="link"><a href="#" target="_blank">Все работы</a></div> -->
             </div>
+
+         
+
         </div>
 
-     
+        <div class="top-block" data-project>
+            <div class="top-block__backgrounds">
+                <div class="top-block__backgrounds--bg">
 
+                    <div></div>
+                    <div class="projects__title projects__title_preview left">XIAOMI</div>
+                </div>
+                <div class="top-block__backgrounds--bg"><div></div></div>
+                <div class="top-block__backgrounds--bg"><div></div></div>
+                <div class="top-block__backgrounds--bg"><div></div></div>
+                <div class="top-block__backgrounds--bg">
+                    <div></div>
+                    <div class="projects__title projects__title_preview right">XIAOMI</div>
+                </div>
+            </div>
+
+            <div class="top-block__info">
+                <div class="container">
+                    <div class="projects">
+                        <img src="img/portfolio-intro.png" alt="">
+
+                        <div class="projects__wrapper">
+                            <div class="projects__title">XIAOMI</div>
+                            <div class="projects__subtitle">Website</div>
+                            <div class="projects__date">April 2019</div>
+                        </div>
+                    </div>
+                    <!-- <div class="link"><a href="#" target="_blank">Все работы</a></div> -->
+                </div>
+            </div>
+
+         
+
+        </div>
     </div>
-
-
     <script src="src/jquery-3.4.0.min.js"></script>
-    <!-- <script src="src/slick.min.js"></script> -->
-    <!-- <script src="src/portfolio.js"></script> -->
+    <script src="src/portfolio-intro.js"></script>
     <script src="src/menu.js"></script>
 </body>
 
