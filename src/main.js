@@ -30,15 +30,19 @@ $(document).ready(function () {
 
     blink();
 
-    $('input').on('blur', function() {
+    $('input').on('blur', function () {
         var body = $("html, body");
         body.stop().animate({ scrollTop: 0 }, 0);
     });
 
+    document.ontouchmove = function (event) {
+        event.preventDefault();
+    };
+
     $('#main-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(e.target).serializeArray();
-        
+
     });
 
 })
