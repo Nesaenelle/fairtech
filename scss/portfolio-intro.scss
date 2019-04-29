@@ -57,6 +57,9 @@ header .link {
       width: calc(100% / 5);
       height: 100%;
       border-left: 1px solid #8a97aa;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
       & > div:first-child {
         height: 100%;
         width: 100%;

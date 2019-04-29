@@ -1,30 +1,55 @@
 $(document).ready(function() {
-	var index = 0;
-	var length = $('[data-project]').length;
+    var index = 0;
+    var length = $('[data-project]').length;
     window.addEventListener("mousewheel", function(event) {
-    	var height = window.innerHeight;
+      
         if (event.wheelDelta > 0 || event.detail < 0) {
             // Scroll up
 
-            index --
-            if(index <= 0) {
-            	index = 0;
-            }
-            
-
-            $('.scroller').css('transform', 'translateY(' + height * index + 'px)');
+            goUp();
         } else {
             // Scroll down
 
-            index ++;
-            if(index >= length - 1) {
-            	index = length- 1;
-            }
-            
-
-            $('.scroller').css('transform', 'translateY(' + (-height * index) + 'px)');
+            goDown();
         }
     }, false);
+
+    function goUp() {
+    	var height = window.innerHeight;
+        index--
+        if (index <= 0) {
+            index = 0;
+        }
+
+
+        $('.scroller').css('transform', 'translateY(' + height * index + 'px)');
+    }
+
+    function goDown() {
+    	var height = window.innerHeight;
+        index++;
+        if (index >= length - 1) {
+            index = length - 1;
+        }
+
+
+        $('.scroller').css('transform', 'translateY(' + (-height * index) + 'px)');
+    }
+
+
+    var ts;
+    $(document).bind('touchstart', function(e) {
+        ts = e.originalEvent.touches[0].clientY;
+    });
+
+    $(document).bind('touchend', function(e) {
+        var te = e.originalEvent.changedTouches[0].clientY;
+        if (ts > te + 5) {
+            goDown();
+        } else if (ts < te - 5) {
+            goUp();
+        }
+    });
 
 
 });
