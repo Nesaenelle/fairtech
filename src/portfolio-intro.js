@@ -51,5 +51,10 @@ $(document).ready(function() {
         }
     });
 
+    $(window).bind('resize', function(e) {
+        var height = window.innerHeight;
+        $('.scroller').css('transform', 'translateY(' + (-height * index) + 'px)');
+    });
+
 
 });

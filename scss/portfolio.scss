@@ -1363,8 +1363,8 @@ main {
       position: relative;
       transition: 0.1s;
       &:hover {
-        // background: #3e3e3e;
-        // color: #fff;
+        background: #3e3e3e;
+        color: #fff;
       }
       @media screen and (max-width: 1280px) and (min-width: 769px) {
         font-size: 14px;

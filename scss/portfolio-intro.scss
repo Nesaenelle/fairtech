@@ -44,6 +44,7 @@ header .link {
   background-position: center;
   height: 100vh;
   position: relative;
+  background: #73839a;
   &__backgrounds {
     position: absolute;
     left: 0;
@@ -231,7 +232,8 @@ header .link {
           top: 39%;
         }
         @media screen and (max-width: 480px) {
-          top: 51%;
+          // top: 51%;
+          display: none;
         }
         &.left {
           right: 0;
