@@ -58,10 +58,10 @@ body {
       }
       &__img {
         img {
-          &:first-child {
+          &:first-of-type {
             display: none;
           }
-          &:last-child {
+          &:last-of-type {
             display: block;
           }
         }
@@ -930,58 +930,7 @@ body {
   }
 }
 
-.lamp-shadow {
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
 
-  -webkit-transform-origin: top center;
-  transform-origin: top center;
-  animation: lampAnimation 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-  z-index: 3;
-  pointer-events: none;
-
-  @media screen and (max-width: 1280px) {
-    opacity: 0;
-    visibility: hidden;
-  }
-  &:before {
-    content: "";
-    transform: rotate(-35deg) translate(-20%, -87%);
-    width: calc(100% + 300px);
-    height: calc(100% + 300px);
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: rgba(19, 19, 19, 0.3);
-    // background-size: 100%;
-    background-position: center top;
-    position: absolute;
-    pointer-events: none;
-  }
-  &:after {
-    content: "";
-    transform: rotate(36deg) translate(20%, -73%);
-    width: calc(100% + 300px);
-    height: calc(100% + 300px);
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: rgba(19, 19, 19, 0.3);
-    // background-size: 100%;
-    background-position: center top;
-    position: absolute;
-    pointer-events: none;
-  }
-}
 
 .lamp {
   top: 0;
@@ -1098,10 +1047,10 @@ body {
     // }
     img {
       width: 138px;
-      &:first-child {
+      &:first-of-type {
         display: block;
       }
-      &:last-child {
+      &:last-of-type {
         display: none;
       }
       @media screen and (max-width: 1280px) {
@@ -1118,6 +1067,55 @@ body {
       }
     }
   }
+}
+
+.lamp-shadow {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+
+
+  &:after {
+    content: none!important;
+  }
+
+  @media screen and (max-width: 1280px) {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .lamp__img {
+    &:before {
+      content: "";
+      transform: rotate(56deg) translate(-1464px,-50%);
+      width: 2500px;
+      height: 2500px;
+      margin: auto;
+      right: 0px;
+      top: 0;
+      background: rgba(19, 19, 19, 0.3);
+      position: absolute;
+      pointer-events: none;
+    }
+    &:after {
+      content: "";
+      transform: rotate(36deg) translate(-50%,-1362px);
+      width: 2500px;
+      height: 2500px;
+      margin: auto;
+      left: 0px;
+      top: 0;
+      background: rgba(19, 19, 19, 0.3);
+      position: absolute;
+      pointer-events: none;
+    }
+  }
+ 
 }
 
 .overlay {
