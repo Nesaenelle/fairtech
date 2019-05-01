@@ -1343,9 +1343,12 @@ main {
       }
       @media screen and (max-width: 600px) {
         padding: 0 15px;
+        margin-top: 30px;
       }
       @media screen and (max-width: 375px) {
-        display: none;
+        // display: none;
+        margin-top: 20px;
+        padding: 0;
       }
     }
     &__prev,
@@ -1374,6 +1377,9 @@ main {
       }
       @media screen and (max-width: 480px) {
         font-size: 12px;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 11px;
       }
       img {
         position: absolute;
@@ -1416,6 +1422,10 @@ main {
         width: 180px;
         padding: 15px 10px 12px 10px;
       }
+      @media screen and (max-width: 375px) {
+        padding: 13px 10px 10px 10px;
+        width: 150px;
+      }
       &:hover {
         img {
           transform: translateX(-10px);
@@ -1431,6 +1441,9 @@ main {
         }
         @media screen and (max-width: 600px) {
           left: -15px;
+        }
+        @media screen and (max-width: 375px) {
+          display: none;
         }
       }
     }
@@ -1460,6 +1473,10 @@ main {
         width: 180px;
         padding: 15px 10px 12px 10px;
       }
+      @media screen and (max-width: 375px) {
+        padding: 13px 10px 10px 10px;
+        width: 150px;
+      }
       &:hover {
         img {
           transform: translateX(10px) rotate(180deg);
@@ -1476,6 +1493,9 @@ main {
         }
         @media screen and (max-width: 600px) {
           right: -15px;
+        }
+        @media screen and (max-width: 375px) {
+          display: none;
         }
       }
     }
